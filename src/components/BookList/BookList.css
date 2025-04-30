@@ -1,0 +1,116 @@
+.booklist, .book-details{
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+.booklist-content{
+    gap: 3rem;
+}
+.book-item{
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+    transition: var(--transition);
+}
+.book-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.book-item-img img{
+    max-width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.book-item-info{
+    margin-top: 2rem;
+}
+.book-item-info-item.title{
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+}
+.book-item-info-item.author{
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+.book-item-info-item:not(.book-item-info-item.title) span:last-child{
+    opacity: 0.8;
+}
+.book-item-info-item.publish-year{
+    opacity: 0.6;
+    font-style: italic;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 600px){
+    .booklist-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .booklist-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .book-item-img img{
+        max-width: 150px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .booklist-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .book-item-img img{
+        max-width: 120px;
+    }
+}
+
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-size: 18px; /* Increased font size */
+    margin-top: 30px; /* Increased margin for better spacing */
+}
+
+.pagination a {
+    text-decoration: none;
+    color: black;
+    padding: 12px 20px; /* Increased padding for larger buttons */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #ccc; /* Thicker border */
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    font-size: 16px; /* Increased font size */
+}
+
+.pagination a:hover {
+    background-color: rgba(0, 119, 255, 0.3); /* More visible hover effect */
+    border: 2px solid #0077ff; /* Thicker border on hover */
+}
+
+.pagination .active {
+    background-color: #c10e32;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #1717173c; /* Thicker border */
+    font-size: 18px; /* Increased font size */
+}
+
+.pagination .disabled {
+    color: #ccc;
+    pointer-events: none;
+    border: 2px solid #ddd; /* Thicker border */
+    background-color: #f1f1f1;
+    font-size: 16px; /* Increased font size */
+}
+
+/* Adding some padding and shadow to enhance the design */
+.pagination a, .pagination .active, .pagination .disabled {
+    min-width: 50px; /* Increased minimum width */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
